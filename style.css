@@ -286,3 +286,26 @@ footer {
         gap: 15px;
     }
 }
+.project-button {
+    margin-top: 25px;
+    padding: 10px 16px;
+
+    width: fit-content;
+
+    background: transparent;
+    color: inherit;
+
+    border: 1px solid #333;
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.project-button:hover {
+    background: #f5f5f5;
+    color: #0a0a0a;
+}

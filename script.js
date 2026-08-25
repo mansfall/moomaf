@@ -42,7 +42,12 @@ projects.map(project => {
         <p>${project.description}</p>
 
         <small>MOOMAF / AI LAB</small>
+        <button class="project-button">View Project</button>
     `;
+const button = card.querySelector(".project-button");
 
+button.addEventListener("click", () => {
+    console.log(`You selected: ${project.name}`);
+});
     projectContainer.appendChild(card);
 });
