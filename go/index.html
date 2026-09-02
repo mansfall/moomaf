@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B1F4B">
+  <title>Moomaf Go</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../"><img src="../assets/logo.svg" class="brand-mark" alt=""><span>Moomaf</span></a>
+  <div class="header-controls">
+    <button id="theme-toggle" class="theme-toggle" type="button"><span class="theme-icon">☾</span><span class="theme-label">Dark</span></button>
+    <div class="language-toggle" role="group" aria-label="Language"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="fr">FR</button></div>
+  </div>
+</header>
+<main class="simple-page">
+  <a class="simple-back" href="../" data-i18n="simple.back">← Back to Moomaf</a>
+  <p class="eyebrow">Moomaf Go</p>
+  <h1 data-i18n="simple.goTitle">Find events. Find people. Go together.</h1>
+  <p data-i18n="simple.goText">Discover what's happening around you — and find people going too. The first product is being built now.</p>
+</main>
+<script src="../script.js"></script>
+<script>
+translations.fr['simple.back']='← Retour à Moomaf';
+translations.fr['simple.goTitle']='Trouvez des événements. Trouvez des personnes. Allez-y ensemble.';
+translations.fr['simple.goText']='Découvrez ce qui se passe autour de vous — et trouvez aussi les personnes qui y vont. Le premier produit est en cours de construction.';
+applyLanguage(localStorage.getItem('moomaf-lang') || 'en');
+</script>
+</body></html>

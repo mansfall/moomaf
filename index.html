@@ -1,132 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Moomaf — Building What's Next</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Moomaf is a developer product lab building useful applications for real life." />
+  <meta name="theme-color" content="#0B1F4B" />
+  <title>Moomaf — Building useful software</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Moomaf home"><img src="assets/logo.svg" class="brand-mark" alt=""/><span>Moomaf</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="#apps" data-i18n="nav.apps">Applications</a>
+    <a href="go/">Moomaf Go</a>
+    <a href="#how" data-i18n="nav.how">How I Build</a>
+    <a href="tech-news/" data-i18n="nav.news">Tech News</a>
+    <a href="#ideas" data-i18n="nav.ideas">Ideas</a>
+    <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a class="nav-button" href="#contact" data-i18n="nav.build">Let's Build</a>
+  </nav>
+  <div class="header-controls">
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+      <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span>
+    </button>
+    <div class="language-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main id="home">
+  <section class="hero shell">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="hero.eyebrow">SOFTWARE • APPLICATIONS • AI</p>
+      <h1 data-i18n-html="hero.title">Building useful<br/>software <span>for real life.</span></h1>
+      <p class="hero-text" data-i18n="hero.text">Moomaf is a developer lab where I build practical applications around problems people actually have — and evolve them with AI.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#apps" data-i18n="hero.apps">Explore Applications →</a><a class="btn btn-secondary" href="#about" data-i18n="hero.about">About Moomaf</a></div>
+    </div>
+    <div class="hero-visual">
+      <div class="signal-map" aria-hidden="true">
+        <svg class="location-map" viewBox="0 0 620 520" preserveAspectRatio="xMidYMid slice">
+          <g class="map-roads">
+            <path d="M-30 120 C90 98 110 175 205 165 S340 70 470 95 S590 178 680 145"/>
+            <path d="M-20 315 C95 265 154 350 260 310 S396 220 500 245 S585 360 660 345"/>
+            <path d="M88 -30 C115 80 72 165 130 250 S250 345 226 560"/>
+            <path d="M360 -20 C330 92 402 155 372 250 S315 385 392 550"/>
+            <path d="M535 -20 C485 95 535 175 500 270 S462 405 530 555"/>
+            <path d="M10 220 C115 215 180 205 275 230 S465 334 645 300"/>
+            <path d="M-15 410 C126 360 220 420 315 392 S472 330 650 438"/>
+          </g>
+          <g class="map-streets">
+            <path d="M10 70 L610 455"/>
+            <path d="M-20 465 L560 40"/>
+            <path d="M150 -10 L635 325"/>
+            <path d="M-5 255 L390 520"/>
+            <path d="M270 -20 L-5 355"/>
+          </g>
+          <g class="route-line">
+            <path d="M105 385 C155 330 180 290 245 280 S355 300 395 235 S470 145 540 155"/>
+          </g>
+          <g class="map-pin pin-a" transform="translate(105 385)">
+            <circle r="18"/><circle class="pin-core" r="5"/>
+          </g>
+          <g class="map-pin pin-b" transform="translate(395 235)">
+            <circle r="15"/><circle class="pin-core" r="4"/>
+          </g>
+          <g class="map-pin pin-c" transform="translate(540 155)">
+            <circle r="18"/><circle class="pin-core" r="5"/>
+          </g>
+        </svg>
+        <span class="signal s1"></span><span class="signal s2"></span><span class="signal s3"></span>
+      </div>
+      <div class="micro-card"><strong data-i18n-html="go.tagline">Find events.<br/>Find people.<br/><span>Go together.</span></strong></div>
+      <div class="phone"><div class="phone-screen">
+        <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
+        <div class="phone-title">Moomaf <strong>Go</strong></div>
+        <p data-i18n="go.description">Discover what's happening around you — and find people going too.</p>
+        <div class="chips"><span>⌖ San Francisco</span><span>✦ For You</span></div>
+        <div class="phone-section-title"><b>Upcoming for you</b><a href="#">View all</a></div>
+        <div class="event-card"><div class="event-thumb music">♫</div><div><b>Live Music</b><small>Tonight · 0.8 mi</small></div><span>›</span></div>
+        <div class="event-card"><div class="event-thumb ai">AI</div><div><b>AI Meetup</b><small>Tomorrow · 1.2 mi</small></div><span>›</span></div>
+        <div class="phone-tabs"><span>⌂<small>Home</small></span><span>◉<small>Discover</small></span><span>♙<small>People</small></span><span>▢<small>Saved</small></span><span>○<small>Profile</small></span></div>
+      </div></div>
+    </div>
+    <aside class="evolution" id="roadmap">
+      <p class="eyebrow" data-i18n="evolution.eyebrow">THE EVOLUTION</p><h2 data-i18n-html="evolution.title">Apps first. AI next.<br/>Agents later.</h2>
+      <div class="evo-item active"><span>01</span><div><h3 data-i18n="evolution.apps.title">Applications</h3><p data-i18n="evolution.apps.text">Build useful products with strong software engineering foundations.</p></div></div>
+      <div class="evo-item"><span>02</span><div><h3 data-i18n="evolution.ai.title">AI Features</h3><p data-i18n="evolution.ai.text">Add recommendations, analysis, personalization and intelligent assistance.</p></div></div>
+      <div class="evo-item"><span>03</span><div><h3 data-i18n="evolution.agents.title">Agents</h3><p data-i18n="evolution.agents.text">Autonomous workflows that can take meaningful actions for users.</p></div></div>
+      <div class="evo-item"><span>04</span><div><h3 data-i18n="evolution.products.title">Real Products</h3><p data-i18n="evolution.products.text">The applications that prove they have potential can grow beyond the portfolio.</p></div></div>
+    </aside>
+  </section>
 
-    <header>
-        <div class="logo">MOOMAF</div>
+  <section class="product-lab" id="apps">
+    <div class="product-main shell-main">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="lab.eyebrow">THE PRODUCT LAB</p><h2 data-i18n="lab.title">Applications</h2></div><p data-i18n="lab.text">Useful products built around real problems. Some start as simple tools. Some may become something much bigger.</p></div>
+      <div class="app-grid">
+        <article class="app-card featured"><span class="number">01</span><div class="app-top"><div class="app-icon navy">GO</div><span class="status">Building</span></div><h3>Moomaf Go</h3><p>Discover events and experiences near you based on your interests — then connect with people going.</p><a href="go/">View Product →</a></article>
+        <article class="app-card"><span class="number">02</span><div class="app-top"><div class="app-icon silver">🎓</div><span class="status">Idea</span></div><h3>Moomaf Learn</h3><p>Find schools, master's programs, scholarships, free courses and certificates in one place.</p><a href="#roadmap">Coming Later →</a></article>
+        <article class="app-card"><span class="number">03</span><div class="app-top"><div class="app-icon silver">💼</div><span class="status">Planned</span></div><h3>Moomaf Career</h3><p>Tools for finding jobs, improving resumes, tracking applications and preparing for interviews.</p><a href="#roadmap">Coming Later →</a></article>
+        <article class="app-card"><span class="number">04</span><div class="app-top"><div class="app-icon silver">🛒</div><span class="status">Idea</span></div><h3>Moomaf Save</h3><p>Compare grocery prices, discover deals and find smarter ways to spend less.</p><a href="#roadmap">Coming Later →</a></article>
+        <article class="app-card"><span class="number">05</span><div class="app-top"><div class="app-icon navy">&lt;/&gt;</div><span class="status">Planned</span></div><h3>Moomaf Dev</h3><p>Simple developer utilities for JSON, APIs, encoding and everyday engineering work.</p><a href="#roadmap">Coming Later →</a></article>
+        <article class="app-card"><span class="number">06</span><div class="app-top"><div class="app-icon silver">✦</div><span class="status">Future</span></div><h3>AI Features</h3><p>AI becomes a layer that makes the applications smarter, more personalized and more useful.</p><a href="#roadmap">See Evolution →</a></article>
+      </div>
+      <div class="principles" id="how">
+        <div class="principle"><div class="principle-icon">◎</div><div><h3>Real Problems</h3><p>Start with problems people actually have, including problems I've experienced.</p></div></div>
+        <div class="principle"><div class="principle-icon">ϟ</div><div><h3>Ship Simply</h3><p>Build the simplest version first. Ship early. Improve continuously.</p></div></div>
+        <div class="principle"><div class="principle-icon">⌨</div><div><h3>Engineering First</h3><p>Strong fundamentals in frontend, backend, data, deployment and more.</p></div></div>
+        <div class="principle"><div class="principle-icon">✦</div><div><h3>AI That Helps</h3><p>Add AI and automation when they truly make the product better.</p></div></div>
+      </div>
+    </div>
+    <aside class="side-column">
+      <section class="side-block" id="about"><p class="eyebrow" data-i18n="about.eyebrow">ABOUT Moomaf</p><h2 data-i18n="about.title">A developer portfolio that can become a product company.</h2><p data-i18n="about.text">I build software in public. The goal is simple: solve useful problems, improve my engineering skills, share what I learn, and build products that matter.</p><a class="btn btn-outline" href="#contact" data-i18n="about.more">Learn More About Me →</a></section>
+      <section class="side-block" id="contact"><p class="eyebrow" data-i18n="public.eyebrow">BUILDING IN PUBLIC</p><h2 data-i18n="public.title">Follow the journey.</h2><p data-i18n="public.text">See what I'm building, what I'm learning, and where Moomaf goes next.</p><div class="contact-email"><a href="mailto:mo@moomaf.com">✉ mo@moomaf.com</a></div><div class="social-actions"><a class="btn btn-outline" href="https://github.com/mansfall/moomaf" target="_blank" rel="noopener">◉ GitHub</a><a class="btn btn-primary" href="https://www.linkedin.com/in/13272/" target="_blank" rel="noopener">in LinkedIn</a></div></section>
+    </aside>
+  </section>
 
-        <nav>
-            <a href="#lab">AI Lab</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
+  <section class="ideas-section" id="ideas">
+    <div class="ideas-shell">
+      <div class="ideas-copy"><p class="eyebrow" data-i18n="ideas.eyebrow">COMMUNITY IDEAS</p><h2 data-i18n="ideas.title">Help shape what Moomaf builds next.</h2><p data-i18n="ideas.text">Have an app idea, feature request, recommendation, or everyday problem you think software could solve? Share it here.</p><div class="idea-examples"><span>“Add public transit directions to Moomaf Go.”</span><span>“Build a scholarship finder for international students.”</span><span>“Compare grocery prices near me.”</span></div></div>
+      <form class="idea-form" id="idea-form" action="submit-idea.php" method="post">
+        <div class="form-row">
+          <label><span data-i18n="form.name">Name</span>
+            <input id="idea-name" name="name" type="text" maxlength="100" placeholder="Your name (optional)" data-i18n-placeholder="form.namePlaceholder">
+          </label>
+          <label><span data-i18n="form.email">Email</span>
+            <input id="idea-email" name="email" type="email" maxlength="160" placeholder="you@example.com">
+          </label>
+        </div>
+        <label><span data-i18n="form.idea">Idea or recommendation</span>
+          <textarea id="idea-message" name="message" rows="6" maxlength="5000" required placeholder="What should Moomaf build or improve?" data-i18n-placeholder="form.ideaPlaceholder"></textarea>
+        </label>
 
+        <label class="website-field" aria-hidden="true">
+          Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
 
-    <main>
-
-        <section class="hero">
-
-            <p class="eyebrow">AI • SOFTWARE • AFRICA-SILICON VALLEY BRIDGE</p>
-
-            <h1>Building<br>What's Next.</h1>
-
-            <p class="hero-text">
-                AI agents, intelligent automation and software
-                exploring new possibilities.
-            </p>
-
-            <a class="button" href="#lab">
-                Explore the AI Lab
-            </a>
-
-        </section>
-
-
-        <section id="lab" class="lab">
-
-            <p class="eyebrow">MOOMAF AI LAB</p>
-
-            <h2>Things I'm Building</h2>
-
-            <div class="cards" id="project-cards"></div>
-
-                <article class="card">
-                    <div class="card-top">
-                        <span>🤖</span>
-                        <span class="status active">BUILDING</span>
-                    </div>
-
-                    <h3>Job Search Agent</h3>
-
-                    <p>
-                        An AI assistant that finds, analyzes and
-                        ranks opportunities.
-                    </p>
-
-                    <small>MOOMAF / AI LAB</small>
-                </article>
-
-
-                <article class="card">
-                    <div class="card-top">
-                        <span>⚙️</span>
-                        <span class="status">NEXT</span>
-                    </div>
-
-                    <h3>IT Support Agent</h3>
-
-                    <p>
-                        Exploring how AI can automate everyday
-                        IT support workflows.
-                    </p>
-
-                    <small>MOOMAF / AI LAB</small>
-                </article>
-
-                <article class="card">
-                    <div class="card-top">
-                        <span>🌍</span>
-                        <span class="status">EXPLORING</span>
-                    </div>
-
-                    <h3>Tech In Africa</h3>
-
-                    <p>
-                        Exploring AI, technology, languages and
-                        opportunities across Africa.
-                    </p>
-
-                    <small>MOOMAF / AFRICA</small>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <section id="about" class="about">
-
-            <p class="eyebrow">ABOUT MOOMAF</p>
-
-            <h2>Learning by Building.</h2>
-
-            <p>
-                Moomaf is an evolving technology lab focused on
-                artificial intelligence, software engineering,
-                and automation.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        <div class="logo">MOOMAF</div>
-        <p>AI • Software • Africa-Silicon Valley Bridge • What's Next</p>
-        <p>© 2026 Moomaf</p>
-    </footer>
+        <div class="form-actions">
+          <button class="btn btn-primary" id="idea-submit" type="submit" data-i18n="ideas.submit">Submit Idea →</button>
+          <p class="form-note"><span data-i18n="ideas.note">Your idea will be sent directly to Moomaf.</span></p>
+        </div>
+        <p class="form-status" id="idea-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><a class="brand" href="#home"><img src="assets/logo.svg" class="brand-mark" alt=""><span>Moomaf</span></a><p>Building useful software, one application at a time.</p><p>© 2026 Moomaf</p><a class="back-top" href="#home">↑</a></footer>
 <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

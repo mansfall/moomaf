@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B1F4B">
+  <title>Moomaf Tech News</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../"><img src="../assets/logo.svg" class="brand-mark" alt=""><span>Moomaf</span></a>
+  <div class="header-controls">
+    <button id="theme-toggle" class="theme-toggle" type="button"><span class="theme-icon">☾</span><span class="theme-label">Dark</span></button>
+    <div class="language-toggle" role="group" aria-label="Language"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="fr">FR</button></div>
+  </div>
+</header>
+<main class="simple-page">
+  <a class="simple-back" href="../" data-i18n="simple.back">← Back to Moomaf</a>
+  <p class="eyebrow" data-i18n="simple.newsEyebrow">TECH NEWS</p>
+  <h1 data-i18n="simple.newsTitle">Technology worth following.</h1>
+  <p data-i18n="simple.newsText">A future Moomaf section for curated AI, software engineering, startup and technology news.</p>
+</main>
+<script src="../script.js"></script>
+<script>
+translations.fr['simple.back']='← Retour à Moomaf';
+translations.fr['simple.newsEyebrow']='ACTUALITÉS TECH';
+translations.fr['simple.newsTitle']='La technologie qui mérite d’être suivie.';
+translations.fr['simple.newsText']='Une future section Moomaf consacrée à une sélection d’actualités sur l’IA, l’ingénierie logicielle, les startups et la technologie.';
+applyLanguage(localStorage.getItem('moomaf-lang') || 'en');
+</script>
+</body></html>
